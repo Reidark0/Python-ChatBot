@@ -12,52 +12,61 @@
 # 
 # Lembrem de Dar git pull antes de começar a codar pra editar o código mais recente
 
+
+# Parte do Matheus -------------
 print(f'Bem-vindo à Barbearia 90S')
 nome = (input(f'Qual seu nome? '))
 print(f'Olá {nome}')
+selecione = 0
+while selecione == 0:
+    print(f'1. Serviços')
+    print(f'2. Sobre nós')
+    print(f'3. Dúvidas')
+    print(f'4. Sair')
+    selecione = (int(input(f'Escolha uma opção para começar:' )))
+    if (selecione == 1):
+        resposta = int((input(f'Qual serviço você gostaria?\n'
+                                f'{1} Corte de cabelo.\n'
+                                f'{2} Barba e cabelo.\n'
+                                f'{3} Completo: Barba, cabelo\n'
+                                f'bigode e sobrancelha\n'
+                                f'Digite o número do serviço: ')))
+        print(f'Você escolheu o serviço', resposta)
 
-servicos = 1
-agendamento = 2
-duvidas = 3
-sair = 4
+        confirmacao = input(f'Agendar? (sim/não): ')
 
-print(f'1. Serviços')
-print(f'2. Agendamento')
-print(f'3. Dúvidas')
-print(f'4. Sair')
-
-selecione = (int(input(f'Escolha uma opção para começar:' )))
-
-if (selecione == 1):
-       resposta = int((input(f'Qual serviço você gostaria?\n'
-                            f'{1} Corte de cabelo.\n'
-                            f'{2} Barba e cabelo.\n'
-                            f'{3} Completo: Barba, cabelo\n'
-                            f'bigode e sobrancelha\n'
-                            f'Digite o número do serviço: ')))
-       print(f'Você escolheu o serviço', resposta)
-
-       confirmacao = input(f'Agendar? (sim/não): ')
-
-       while (confirmacao == 'sim') or (confirmacao == 'nao'):
-              if confirmacao == 'sim':
-                dia = input(f'{1} terça-feira\n'
-                            f'{2} quarta-feira\n'
-                            f'{3} quinta-feira\n'
-                            f'{4} sexta-feira\n'
-                            f'{5} sábado\n'
-                            f'Qual dia gostaria de agendar?')
-                hora = input(f'Qual horário gostaria de agendar? ')
-                print(f'Você está agendado para: ', dia, hora)
+        while (confirmacao == 'sim') or (confirmacao == 'nao'):
+                if confirmacao == 'sim':
+                    dia = input(f'{1} terça-feira\n'
+                                f'{2} quarta-feira\n'
+                                f'{3} quinta-feira\n'
+                                f'{4} sexta-feira\n'
+                                f'{5} sábado\n'
+                                f'Qual dia gostaria de agendar?')
+                    hora = input(f'Qual horário gostaria de agendar? ')
+                    print(f'Você está agendado para: ', dia, hora)
+                    break
+    # Parte do Alex --------------------------
+    if (selecione == 3):
+        resposta2 = input(f'O que você gostaria de saber?\n'
+                        f'{1} Dia e horário de funcionamento\n'
+                        f'{2} Localização\n'
+                        f'{3} Formas de pagamento\n'
+                        f'Selecione uma opção:')
+        if resposta2 == 1: 
+            print(f'Funcionamos de segunda à sexta das 9h às 21h')
+        elif resposta2 == 2:
+            print(f'Estamos localizados na Rua das Palmeiras, 33')
+    # Parte do Rafael ---------------------
+    if selecione == 2:
+        while selecione == 2:
+            print(f'Que bom saber que você tem interesse em nós!\n'
+                f'Oque você quer saber?\n')
+            sobre1 = int(input(f'1 - Membros da equipe'
+                            f'2 - Fundação da barbearia'
+                            f'3 - Missão e Visão'
+                            f'0 - Voltar ao menu anterior'))
+            if sobre1 == 0:           # Para zerar a escolha inicial
+                selecione = 0
                 break
-if (selecione == 3):
-       resposta2 = input(f'O que você gostaria de saber?\n'
-                         f'{1} Dia e horário de funcionamento\n'
-                         f'{2} Localização\n'
-                         f'{3} Formas de pagamento\n'
-                         f'Selecione uma opção:')
-if resposta2 == 1: 
-       print(f'Funcionamos de segunda à sexta das 9h às 21h')
-elif resposta2 == 2:
-       print(f'Estamos localizados na Rua das Palmeiras, 33')
 
