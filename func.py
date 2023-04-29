@@ -1,0 +1,1 @@
+# Aqu pra criar as funções e chamar como biblioteca no main.py
