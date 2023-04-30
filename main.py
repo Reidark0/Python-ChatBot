@@ -14,6 +14,8 @@
 
 
 # Parte do Matheus -------------
+import func
+
 print(f'Bem-vindo à Barbearia 90S')
 nome = (input(f'Qual seu nome? '))
 print(f'Olá {nome}')
@@ -61,12 +63,36 @@ while selecione == 0:
     if selecione == 2:
         while selecione == 2:
             print(f'Que bom saber que você tem interesse em nós!\n'
-                f'Oque você quer saber?\n')
-            sobre1 = int(input(f'1 - Membros da equipe'
-                            f'2 - Fundação da barbearia'
-                            f'3 - Missão e Visão'
-                            f'0 - Voltar ao menu anterior'))
+                  f'Oque você quer saber?\n')
+            sobre1 = int(input(f'1 - Membros da equipe\n'
+                               f'2 - Fundação da barbearia\n'
+                               f'3 - Missão e Visão\n'
+                               f'0 - Voltar ao menu anterior\n'))
             if sobre1 == 0:           # Para zerar a escolha inicial
-                selecione = 0
-                break
-
+                    selecione = 0
+                    print("Escolha uma das opções: ")
+                    break
+            while sobre1 != 0:
+                if sobre1 == 1:
+                    print(f'Somos 5 integrantes.\n'
+                        f'Alex\n'
+                        f'Arthur\n'
+                        f'Daniel\n'
+                        f'Matheus\n'
+                        f'Rafael')
+                    sobre1 = func.retornopequeno()
+                    break
+                elif sobre1 == 2:
+                    print(f'A nossa barbearia surgiu em decorrencia de um trabalho do curso '
+                          f'da resilia que nós inspirou a criar essa barbearia, que apesar das dores de cabeça '
+                          f'iniciais conseguimos crescer e estarmos onde estamos.')
+                    sobre1 = func.retornopequeno()
+                    break
+                elif sobre1 == 3:
+                    print(f'A nossa missão é deixar o mundo mais bonito e levar mais confiança para as pessoas '
+                          f'que necessitem de um up na auto estima e na aparencia\n'
+                          f'A nossa Visão é ser a maior barbearia do País em 5 anos e espalhar a cultura '
+                          f'do bom corte de cabelo pelo mundo inteiro.')
+                    sobre1 = func.retornopequeno()
+                    break
+                
