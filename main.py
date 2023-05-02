@@ -15,6 +15,7 @@
 
 # Parte do Matheus -------------
 import func
+from func import dia_por_extenso
 
 print(f'Bem-vindo à Barbearia 90S')
 nome = (input(f'Qual seu nome? '))
