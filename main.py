@@ -25,7 +25,7 @@ while selecione == 0:
     print(f'1. Serviços')
     print(f'2. Sobre nós')
     print(f'3. Dúvidas')
-    print(f'4. Sair')
+    print(f'0. Sair')
     selecione = (int(input(f'Escolha uma opção para começar:' )))
     if (selecione == 1):
         resposta = int((input(f'Qual serviço você gostaria?\n'
@@ -71,7 +71,6 @@ while selecione == 0:
                                f'3 - Missão e Visão\n'
                                f'0 - Voltar ao menu anterior\n'))
             if sobre1 == 0:           # Para zerar a escolha inicial
-                    selecione = 0
                     print("Escolha uma das opções: ")
                     break
             while sobre1 != 0:
@@ -97,4 +96,5 @@ while selecione == 0:
                           f'do bom corte de cabelo pelo mundo inteiro.')
                     sobre1 = func.retornopequeno()
                     break
-                
+    if selecione == 0:
+        print('Tudo bem. nos avise se tiver algo com que possamos te ajudar!')
