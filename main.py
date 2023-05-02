@@ -51,16 +51,49 @@ while selecione == 0:
                 break
 
     # Parte do Alex --------------------------
-    if (selecione == 3):
-        resposta2 = input(f'O que você gostaria de saber?\n'
-                        f'{1} Dia e horário de funcionamento\n'
-                        f'{2} Localização\n'
-                        f'{3} Formas de pagamento\n'
-                        f'Selecione uma opção:')
-        if resposta2 == 1: 
-            print(f'Funcionamos de segunda à sexta das 9h às 21h')
-        elif resposta2 == 2:
-            print(f'Estamos localizados na Rua das Palmeiras, 33')
+    if selecione == 3:
+        while selecione == 3:
+            resposta = int(input(
+                '\n1. Horário de funcionamento.\n2. Localização.\n3. Formas de pagamento\n4. Outras dúvidas\n5. Sair\n\nEscolha uma opção para prosseguir: '))
+            while resposta != 5:
+                if resposta == 1:
+                    simNao = input(
+                        "\nFuncionamos das 08:00 as 22:00!\nSegunda a Sexta-Feira ;)\n\nDeseja algo mais? (sim/não): ")
+                    if simNao == "sim":
+                        selecione = 0
+                        break
+                    else:
+                        print("Obrigado, volte sempre!")
+                        break
+                elif resposta == 2:
+                    simNao = input(
+                        "\nEstamos localizados na rua Ifood, n50, Resilia, 50500-500\n\nDeseja algo mais? (sim/não): ")
+                    if simNao == "sim":
+                        selecione = 0
+                        break
+                    else:
+                        print("Obrigado, volte sempre!")
+                        break
+                elif resposta == 3:
+                    simNao = input(
+                        "\nCrédito, Débito, Dinheiro e PIX\n\nDeseja algo mais? (sim/não): ")
+                    if simNao == "sim":
+                        selecione = 0
+                        break
+                    else:
+                        print("Obrigado, volte sempre!")
+                        break
+                elif resposta == 4:
+                    simNao = input(
+                        "\nPara sanar outras dúvidas, entre em contato conosco pelo número: (50)95050-5050\n\nDeseja algo mais? (sim/não): ")
+                    if simNao == "sim":
+                        selecione = 0
+                        break
+                    else:
+                        print("Obrigado, volte sempre!")
+                        break
+            print("Obrigado, volte sempre!")
+            break
     # Parte do Rafael ---------------------
     if selecione == 2:
         while selecione == 2:
