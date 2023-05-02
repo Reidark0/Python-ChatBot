@@ -34,20 +34,22 @@ while selecione == 0:
                                 f'bigode e sobrancelha\n'
                                 f'Digite o número do serviço: ')))
         print(f'Você escolheu o serviço', resposta)
-
+#fix by Daniel 
         confirmacao = input(f'Agendar? (sim/não): ')
 
-        while (confirmacao == 'sim') or (confirmacao == 'nao'):
-                if confirmacao == 'sim':
-                    dia = input(f'{1} terça-feira\n'
-                                f'{2} quarta-feira\n'
-                                f'{3} quinta-feira\n'
-                                f'{4} sexta-feira\n'
-                                f'{5} sábado\n'
-                                f'Qual dia gostaria de agendar?')
-                    hora = input(f'Qual horário gostaria de agendar? ')
-                    print(f'Você está agendado para: ', dia, hora)
-                    break
+while (confirmacao == 'sim') or (confirmacao == 'nao'):
+    if confirmacao == 'sim':
+        dia = int(input(f'{1} terça-feira\n'
+                        f'{2} quarta-feira\n'
+                        f'{3} quinta-feira\n'
+                        f'{4} sexta-feira\n'
+                        f'{5} sábado\n'
+                        f'Qual dia gostaria de agendar?'))
+        dia_extenso = dia_por_extenso(dia)
+        hora = input(f'Qual horário gostaria de agendar? ')
+        print(f'Você está agendado para: {dia_extenso} às {hora}')
+        break
+
     # Parte do Alex --------------------------
     if (selecione == 3):
         resposta2 = input(f'O que você gostaria de saber?\n'
