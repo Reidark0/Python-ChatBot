@@ -25,10 +25,23 @@ while selecione == 0:
     print(f'1. Serviços')
     print(f'2. Sobre nós')
     print(f'3. Dúvidas')
+
     print(f'4. Cursos')
-    print(f'5. Sair')
+    
+
+    print(f'0. Sair')
+
     selecione = (int(input(f'Escolha uma opção para começar:' )))
-    if (selecione == 1):
+
+    if selecione == 0:
+        saida = input('Deseja realmente sair? y/n')
+        if saida == 'y':
+            print('Tudo bem. nos avise se tiver algo com que possamos te ajudar!')
+            exit()
+        elif saida == 'n':
+            continue
+
+    elif (selecione == 1):
         while selecione == 1:           # Loop para voltar ao menu inicial -- Rafael
             resposta = int((input(f'Qual serviço você gostaria?\n'
                                     f'{1} Corte de cabelo.\n'
@@ -110,6 +123,7 @@ while selecione == 0:
                         break
             print("Obrigado, volte sempre!")
             break
+
     # Parte do Rafael ---------------------
     if selecione == 2:
         while selecione == 2:
@@ -145,6 +159,7 @@ while selecione == 0:
                           f'do bom corte de cabelo pelo mundo inteiro.')
                     sobre1 = func.retornopequeno()
                     break
+    
 # Parte Arthur :        
     if selecione==4:
             while selecione == 4:
@@ -183,3 +198,4 @@ while selecione == 0:
     elif selecione == 5:
         print('Tudo bem. nos avise se tiver algo com que possamos te ajudar!')
         exit()
+
