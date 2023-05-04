@@ -25,7 +25,8 @@ while selecione == 0:
     print(f'1. Serviços')
     print(f'2. Sobre nós')
     print(f'3. Dúvidas')
-    print(f'4. Sair')
+    print(f'4. Cursos')
+    print(f'5. Sair')
     selecione = (int(input(f'Escolha uma opção para começar:' )))
     if (selecione == 1):
         while selecione == 1:           # Loop para voltar ao menu inicial -- Rafael
@@ -144,6 +145,41 @@ while selecione == 0:
                           f'do bom corte de cabelo pelo mundo inteiro.')
                     sobre1 = func.retornopequeno()
                     break
-    elif selecione == 4:
+# Parte Arthur :        
+    if selecione==4:
+            while selecione == 4:
+                print(f'Qual curso você tem interesse?\n')
+                cursos_= int(input(f'{1} Barbeiro;\n'
+                               f'{2} Especialização em Cabelos Crespos e Cacheados;\n'
+                               f'{3} Hair Design;\n'
+                               f'{0} Menu Anterior.\n'))
+                if cursos_ == 0:           
+                    print("Opções: ")
+                    break
+                    while cursos_ != 0:
+                        if cursos_ == 1:
+                            print(f'Durante esse curso, você terá a oportunidade de aprender desde as técnicas básicas '
+                          f'até as avançadas, com a orientação do nosso time! Além disso, terá a sua disposição'
+                          f' os melhores equipamentos e produtos do mercado, garantindo que sua seja de alta qualidade'
+                          f'e atualizada com o mercado de trabalho!')
+                        cursos_ = func.retornopequeno()
+                        break
+                elif cursos_ == 2:
+                    print(f'Aprenda técnicas exclusivas para cortar cabelos crespos e cacheados no nosso curso especializado!'
+                          f'Profissionais qualificados irão ensinar desde cortes básicos até os mais elaborados. Torne-se um '
+                          f'especialista em cabelos crespos e cacheados e comece a transformar a vida de muitas pessoas com seus cortes incríveis.' 
+                          f'Matricule-se agora mesmo!')
+                    cursos_ = func.retornopequeno()
+                    break       
+                elif cursos_ == 3:
+                    print(f'O nosso curso de Hair Design é a escolha perfeita para quem deseja se tornar um especialista em cabelos.'
+                          f'Com técnicas exclusivas e profissionais altamente capacitados, você aprenderá desde cortes modernos até penteados' 
+                          f'elaborados, garantindo resultados incríveis e duradouros. Não perca mais tempo e matricule-se agora em nosso curso de Hair Design' 
+                          f'para se tornar um profissional de excelência!')
+                    cursos_ = func.retornopequeno()
+                    break
+            
+            break
+    elif selecione == 5:
         print('Tudo bem. nos avise se tiver algo com que possamos te ajudar!')
         exit()
