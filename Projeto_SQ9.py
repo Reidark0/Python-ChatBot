@@ -36,7 +36,7 @@ if (selecione == 1): # Ao entrar no menu, outra coleta da variável corresponden
                 break
                 
        ## Este menu foi criado apenas para teste de verificação de entrada 
-if '''(selecione == 3):
+'''if (selecione == 3):
        resposta2 = input(f'O que você gostaria de saber?\n{1} Dia e horário de funcionamento\n{2} Localização\n{3} Formas de pagamento\n Selecione uma opção:')
 if resposta2 == 1: 
        print('Funcionamos de segunda à sexta das 9h às 21h')
