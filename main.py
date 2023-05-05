@@ -164,29 +164,21 @@ while selecione == 0:
     if selecione==4:
             while selecione == 4:
                 print(f'Qual curso você tem interesse?\n')
-                cursos_= int(input(f'{1} Barbeiro;\n'
-                               f'{2} Especialização em Cabelos Crespos e Cacheados;\n'
-                               f'{3} Hair Design;\n'
+                cursos_= int(input(f'{1} Especialização em Cabelos Crespos e Cacheados;\n'
+                               f'{2} Hair Design;\n'
                                f'{0} Menu Anterior.\n'))
                 if cursos_ == 0:           
                     print("Opções: ")
                     break
-                    while cursos_ != 0:
-                        if cursos_ == 1:
-                            print(f'Durante esse curso, você terá a oportunidade de aprender desde as técnicas básicas '
-                          f'até as avançadas, com a orientação do nosso time! Além disso, terá a sua disposição'
-                          f' os melhores equipamentos e produtos do mercado, garantindo que sua seja de alta qualidade'
-                          f'e atualizada com o mercado de trabalho!')
-                        cursos_ = func.retornopequeno()
-                        break
-                elif cursos_ == 2:
+                   
+                elif cursos_ == 1:
                     print(f'Aprenda técnicas exclusivas para cortar cabelos crespos e cacheados no nosso curso especializado!'
                           f'Profissionais qualificados irão ensinar desde cortes básicos até os mais elaborados. Torne-se um '
                           f'especialista em cabelos crespos e cacheados e comece a transformar a vida de muitas pessoas com seus cortes incríveis.' 
                           f'Matricule-se agora mesmo!')
                     cursos_ = func.retornopequeno()
                     break       
-                elif cursos_ == 3:
+                elif cursos_ == 2:
                     print(f'O nosso curso de Hair Design é a escolha perfeita para quem deseja se tornar um especialista em cabelos.'
                           f'Com técnicas exclusivas e profissionais altamente capacitados, você aprenderá desde cortes modernos até penteados' 
                           f'elaborados, garantindo resultados incríveis e duradouros. Não perca mais tempo e matricule-se agora em nosso curso de Hair Design' 
