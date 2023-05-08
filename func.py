@@ -2,9 +2,10 @@
 
 # função para retornar pro sobre-nos ou terminar
 def retornopequeno():
-    resposta = input("gostaria de saber algo mais? \n"
-                     "1 - Sim\n"
-                     "0 - Não")
+    print('gostaria de saber algo mais? \n'
+          '1 - Sim\n'
+          '0 - Não\n')
+    resposta = input()
     if resposta == '1':
         return
     elif resposta == '0':
