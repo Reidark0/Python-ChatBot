@@ -1,23 +1,25 @@
 import func
 from func import dia_por_extenso
 
-print('Bem-vindo à Barbearia 90S')
-nome = (input('Qual seu nome? '))
+print('Bem-vindo à Barbearia 90S!')
+print('Qual é o seu nome?')
+nome = (input())
 print(f'Olá {nome}')
 selecione = '0'
 print(('Escolha uma opção para começar:' ))
 while selecione == '0':       # Loop para poder vooltar a esse menu
-    print(f'1 - Serviços\n'    
-          f'2 - Sobre nós\n'
-          f'3 - Dúvidas\n'
-          f'4 - Cursos\n'
-          f'0 - Sair\n')
+    print('1 - Serviços\n'    
+          '2 - Sobre nós\n'
+          '3 - Dúvidas\n'
+          '4 - Cursos\n'
+          '0 - Sair\n')
     selecione = input()
     # Sair do programa
     if selecione == '0':
-        saida = input('Deseja realmente sair?\n'
-                       f'1 - Sim\n'
-                       f'0 - Não\n')
+        print('Deseja realmente sair?\n'
+              '1 - Sim\n'
+              '0 - Não\n')
+        saida = input()
         if saida == '1':
             print('Tudo bem. nos avise se tiver algo com que possamos te ajudar!')
             exit()
@@ -27,23 +29,25 @@ while selecione == '0':       # Loop para poder vooltar a esse menu
     # Serviços
     elif selecione == '1':
         while selecione == '1':       # Loop para voltar a esse menu secundário
-            resposta = input('Qual serviço você gostaria?\n'
-                            '1 - Corte de cabelo\n'
-                            '2 - Barba e cabelo\n'
-                            '3 - Completo: Barba, cabelo, bigode e sobrancelha\n'
-                            '0 - Voltar ao menu anterior\n'
-                            'Digite o número do serviço: ')
+            print('Qual serviço você gostaria?\n'
+                  '1 - Corte de cabelo\n'
+                  '2 - Barba e cabelo\n'
+                  '3 - Completo: Barba, cabelo, bigode e sobrancelha\n'
+                  '0 - Voltar ao menu anterior\n'
+                  'Digite o número do serviço: ')
+            resposta = input()
             if resposta == '0':
                 selecione = '0'
                 print(f'{nome} escolha uma das opções abaixo:')
                 break
             elif resposta == '1':
-                print('Escolha uma data para reservar:')
-                dia = int(input('1 terça-feira\n'
-                                '2 quarta-feira\n'
-                                '3 quinta-feira\n'
-                                '4 sexta-feira\n'
-                                '5 sábado\n'))
+                print('Escolha uma data para reservar:\n'
+                        '1 terça-feira\n'
+                        '2 quarta-feira\n'
+                        '3 quinta-feira\n'
+                        '4 sexta-feira\n'
+                        '5 sábado\n')
+                dia = int(input())
                 dia_extenso = dia_por_extenso(dia)
                 hora = input('Qual horário gostaria de agendar? ')
                 print(f'Você está agendado para: {dia_extenso} às {hora}')
@@ -52,24 +56,25 @@ while selecione == '0':       # Loop para poder vooltar a esse menu
     # Sobre nós
     elif selecione == '2':
         while selecione == '2':
-            print(f'Que bom saber que você tem interesse em nós!\n'
-                  f'Oque você quer saber?\n')
-            resposta = int(input('1 - Membros da equipe\n'
-                               '2 - Fundação da barbearia\n'
-                               '3 - Missão e Visão\n'
-                               '0 - Voltar ao menu anterior\n'))
+            print(f'Que bom saber que você tem interesse em nós {nome}!\n'
+                  'Oque você quer saber?\n'
+                  '1 - Membros da equipe\n'
+                  '2 - Fundação da barbearia\n'
+                  '3 - Missão e Visão\n'
+                  '0 - Voltar ao menu anterior\n')
+            resposta = input()
             if resposta == '0':
-                    print(f'{nome} escolha uma das opções abaixo:')
-                    selecione = '0'
-                    break
+                print(f'{nome} escolha uma das opções abaixo:')
+                selecione = '0'
+                break
             while resposta != '0':
                 if resposta == '1':
                     print('Somos 5 integrantes.\n'
-                        'Alex\n'
-                        'Arthur\n'
-                        'Daniel\n'
-                        'Matheus\n'
-                        'Rafael')
+                          'Alex\n'
+                          'Arthur\n'
+                          'Daniel\n'
+                          'Matheus\n'
+                          'Rafael')
                     func.retornopequeno()
                     break
                 elif resposta == '2':
@@ -88,16 +93,17 @@ while selecione == '0':       # Loop para poder vooltar a esse menu
     # Dúvidas
     elif selecione == '3':
         while selecione == '3':
-            resposta = input('Sobre qual tópico você tem dúvidas?\n'
-                             '1 - Horário de funcionamento.\n'
-                             '2 - Localização.\n'
-                             '3 - Formas de pagamento\n'
-                             '4 - Outras dúvidas\n'
-                             '0 - Voltar ao menu anterior\n')
+            print('Sobre qual tópico você tem dúvidas?\n'
+                  '1 - Horário de funcionamento.\n'
+                  '2 - Localização.\n'
+                  '3 - Formas de pagamento\n'
+                  '4 - Outras dúvidas\n'
+                  '0 - Voltar ao menu anterior\n')
+            resposta = input()
             if resposta == '0':
-                    print(f'{nome} escolha uma das opções abaixo:')
-                    selecione = '0'
-                    break
+                print(f'{nome} escolha uma das opções abaixo:')
+                selecione = '0'
+                break
             while resposta != '0':
                 if resposta == '1':
                     print('Funcionamos das 08:00 as 22:00 de Segunda a Sexta-Feira')
@@ -118,26 +124,32 @@ while selecione == '0':       # Loop para poder vooltar a esse menu
     # Cursos
     elif selecione == '4':
         while selecione == '4':
-            print('Qual curso você tem interesse?\n')
-            resposta= input('1 - Especialização em Cabelos Crespos e Cacheados;\n'
-                                '2 - Hair Design;\n'
-                                '0 - Voltar ao menu anterior')
-            if resposta == '0':           
-                print('Opções: ')
+            print('Qual curso você tem interesse?\n'
+                  '1 - Especialização em Cabelos Crespos e Cacheados;\n'
+                  '2 - Hair Design;\n'
+                  '0 - Voltar ao menu anterior')
+            resposta= input()
+            if resposta == '0':
+                print(f'{nome} escolha uma das opções abaixo:')
                 selecione = '0'
                 break
             while resposta != '0':
                 if resposta == '1':
-                    print('Aprenda técnicas exclusivas para cortar cabelos crespos e cacheados no nosso curso especializado!'
-                        'Profissionais qualificados irão ensinar desde cortes básicos até os mais elaborados. Torne-se um '
-                        'especialista em cabelos crespos e cacheados e comece a transformar a vida de muitas pessoas com seus cortes incríveis.' 
-                        'Matricule-se agora mesmo!')
+                    print('Aprenda técnicas exclusivas para cortar cabelos crespos e cacheados'
+                          ' no nosso curso especializado!\n Profissionais qualificados irão '
+                          'ensinar desde cortes básicos até os mais elaborados. Torne-se um '
+                          'especialista em cabelos crespos e cacheados e comece a transformar '
+                          'a vida de muitas pessoas com seus cortes incríveis.\n'
+                          'Matricule-se agora mesmo!')
                     resposta = func.retornopequeno()
                     break       
                 elif resposta == '2':
-                    print('O nosso curso de Hair Design é a escolha perfeita para quem deseja se tornar um especialista em cabelos.'
-                        'Com técnicas exclusivas e profissionais altamente capacitados, você aprenderá desde cortes modernos até penteados ' 
-                        'elaborados, garantindo resultados incríveis e duradouros. Não perca mais tempo e matricule-se agora em nosso curso de Hair Design ' 
-                        'para se tornar um profissional de excelência!')
+                    print('O nosso curso de Hair Design é a escolha perfeita para quem deseja '
+                          'se tornar um especialista em cabelos.\n'
+                          'Com técnicas exclusivas e profissionais altamente capacitados, '
+                          'você aprenderá desde cortes modernos até penteados elaborados, '
+                          'garantindo resultados incríveis e duradouros.\n'
+                          'Não perca mais tempo e matricule-se agora em nosso curso de'
+                          'Hair Design para se tornar um profissional de excelência!')
                     resposta = func.retornopequeno()
                     break
